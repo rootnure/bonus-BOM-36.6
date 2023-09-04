@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Engineering</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="alert('hi there')">Alert</button>
+    <br><br>
+    <button onclick="alertMsg()">Show Msg</button>
+    <br><br>
+    <button onclick="confirmMsg()">Accept Cookies</button>
+    <br><br>
+    <button onclick="promptMsgAndUserInput()">Give Me Some Data</button>
+
+    <script>
+        const alertMsg = () => {
+            alert('show some msg to browser for user');
+        }
+
+        const confirmMsg = () => {
+            const isConfirmed = confirm('Accept our browser cookies');
+
+            if (isConfirmed) {
+                alert('Ekhon theke r pet khali thakbe na');
+            }
+            else {
+                alert('Future e abr ask korbo');
+            }
+        }
+
+        const promptMsgAndUserInput = () => {
+            const name = prompt('What is your name?');
+            const age = prompt('How old are you?');
+
+            if (name && age) {
+                alert(`Hi ${name}, you are ${age} years old.`);
+            }
+            else {
+                alert('Bakxo khali rakha jabe na');
+            }
+        }
+    </script>
+</body>
+
+</html>
